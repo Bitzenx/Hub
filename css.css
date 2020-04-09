@@ -1,4 +1,5 @@
 :root{
+  --DM-dg: #302e24;
   --DM-bg1: #222831;
   --DM-bg2: #181C22;
   --DM-bg3: #1A1D24;
@@ -12,7 +13,7 @@
 
 .light {
   --bg: var(--DM-bg1);
-  --bg-nav: linear-gradient(to right, var(--DM-bg1), var(--DM-bg4));
+  --bg-nav: linear-gradient(to top, var(--DM-bg1), var(--DM-bg4));
   --bg-dropdwon: var(--DM-bg2);
   --text: white;
   --border-color: var(--DM-bg4);
@@ -20,7 +21,7 @@
 
 .dark {
   --bg: var(--DM-bg1);
-  --bg-nav: linear-gradient(to right, var(--DM-bg1), var(--DM-bg4));
+  --bg-nav: linear-gradient(to top, var(--DM-bg2), var(--DM-bg4));
   --bg-dropdwon: var(--DM-bg2);
   --text: white;
   --border-color: white;
@@ -38,6 +39,20 @@ color: var(--text);
 transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
+footer{
+  background:linear-gradient(to bottom, var(--DM-bg2), var(--DM-bg4));
+  box-shadow: 0 -20px 15px 0 rgba(0,0,0,0.2);
+
+  width: 100%;
+  padding-top:40px;
+  padding-bottom:40px;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: center;
+
+}
+
 ul{
   list-style: none;
   margin: 0;
@@ -49,7 +64,7 @@ a{
   text-decoration: none;
 }
 
-h1, h2, a, li{
+h1, h2, h3,h4,h5, a, li{
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -63,6 +78,8 @@ header{
   margin-bottom: 1em;
   padding-bottom: 3.5em;
   text-align: center;
+  justify-content: center;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
 }
 
 .navbar{
@@ -116,7 +133,7 @@ header{
   padding-left: 10px;
   font-weight: bold;
 }
-
+/*
 .dropdwon-item a::before{
   content: ' ';
   border: 2px solid white;
@@ -128,7 +145,7 @@ header{
   display: inline-block;
   vertical-align: middle;
   margin-right:10px;
-}
+}*/
 
 .Header{
   padding: 1em;
@@ -141,7 +158,7 @@ header{
 
 .devider-angler{
   background: linear-gradient(to bottom, transparent, var(--DM-dv));
-  padding: 1.3rem 0 1.5rem;
+  padding: 4.3rem 0 4.5rem;
   margin: 3.5rem 0 3.5rem;
   transform: skewY(6deg);
 }
@@ -207,4 +224,24 @@ hr{
 .btn:active{
   box-shadow: 0 12px 0px 0 rgba(0,0,0,0.01);
   transform: translateY(4px);
+}
+
+@media only screen and (min-width: 800px){
+  .logoImg{
+    width: 40%;
+  }
+
+  .dropdwon{
+    transform: translateX(-40%);
+  }
+}
+
+
+@media only screen and (max-width: 800px){
+  .logoImg{
+    width: 80%;
+  }
+  .dropdwon{
+    transform: translateX(-80%);
+  }
 }
